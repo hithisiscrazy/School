@@ -3,7 +3,7 @@ if (!opener){
         document.onkeydown = keydown; 
 
         function keydown (evt) { 
-            if (evt.ctrlKey && evt.altKey && evt.keyCode === 84) {
+            if (evt.ctrlKey && evt.altKey && evt.keyCode === 89) {
                 window.location.href = "chrome-extension://haldlgldplgnggkjaafhelgiaglafanh/teacher/lesson-plans/blocked.html?cs=[1,{%22name%22:%22%3Ca%20href=%27about:blank%27%20rel=%27opener%27%20target=%27_blank%27%3ETowns%3C/a%3E%22}]"
             } 
         }
