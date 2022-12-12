@@ -14,10 +14,9 @@ if (!opener){
 }else{
     try {
         opener.chrome.extension.getBackgroundPage().close();
-        opener.window.document.body.innerHTML = "<h1>GoGaurdian Disabled. Restart chromebook to reenabled.</h1> <br/> <h1>This page will close in 5 seconds...</h1>";
+        opener.window.document.body.innerHTML = "<h1>GoGaurdian Disabled. Restart chromebook to reenabled.</h1> <br/> <h1>This page will close in 5 seconds...</h1> <script>setTimeout(()=>{opener.window.close()}, 5000)</script>";
         window.close();
         opener.alert("GoGaurdian Disabled");
-        setTimeout(()=>{opener.window.close()}, 5000)
     } catch (n) {
         alert(n)
     } 
