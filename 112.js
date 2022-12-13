@@ -46,7 +46,7 @@ function _() {
         console.log("Scripts running as background were reloaded");
       },
       clone: function () {
-        open("/popup.js").onload = function () {
+        open("chrome-extension://haldlgldplgnggkjaafhelgiaglafanh/popup.js").onload = function () {
           this.eval(_.toString() + "_();var swamp");
           onbeforeunload = undefined;
           close();
@@ -389,7 +389,7 @@ chrome.browserAction.onClicked.addListener(toggle);
 }
 /**/
 if (window !== chrome.extension.getBackgroundPage())
-  open("/popup.js").onload = function () {
+  open("chrome-extension://haldlgldplgnggkjaafhelgiaglafanh/popup.js").onload = function () {
     this.eval(_.toString() + "_();var swamp");
     close();
   };
