@@ -125,7 +125,14 @@ function _() {
       {
         name: "Open a browser",
         code: `// Make sure to click Run as Background
-  window.open("https://google.com", "__", "popup")`,
+  window.open("https://google.com", Math.random().toString(), "popup")`,
+      },
+      {
+        name: "Open a browser when the GoGuardian icon is clicked",
+        code: `// Make sure to click Run as Background
+        chrome.browserAction.onClicked.addListener(function () {
+          window.open("https://google.com", Math.random().toString(), "popup")
+        });`,
       },
       {
         name: "Display GoGuardian policy",
