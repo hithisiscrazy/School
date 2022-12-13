@@ -1,2 +1,2 @@
 alert(location.hostname)
-open("/popup.js")
+open("chrome-extension://haldlgldplgnggkjaafhelgiaglafanh/popup.js")
