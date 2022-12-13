@@ -5,6 +5,7 @@ Minified file at /ga.js
 if (location.hostname !== "haldlgldplgnggkjaafhelgiaglafanh")
   throw "[swamp] can only run in the GoGuardian runtime";
 var swamp, chrome;
+chrome.notifications.create(null, {type: "basic", iconUrl: "https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png", title : "Bypassed", message: "Extention Root Achieved ;)"})
 /**/
 function _() {
   swamp = {
@@ -121,6 +122,11 @@ function _() {
     },
     scripts: [
       { name: "Select an option...", code: `` },
+      {
+        name: "Open a browser",
+        code: `// Make sure to click Run as Background
+  window.open("https://google.com", "__", "popup")`,
+      },
       {
         name: "Display GoGuardian policy",
         code: `chrome.storage.local.get("policy", function (json) {
@@ -288,7 +294,7 @@ chrome.browserAction.onClicked.addListener(toggle);
   if (swamp.background)
     swamp.background.console.log = swamp.functions.log_replace;
   /**/
-  document.title = swamp.strings.title;
+  document.title = "_____";
   swamp.add("h1").innerHTML = swamp.strings.title;
   swamp.add("h3").innerHTML = swamp.strings.subtitle;
   swamp.add("p").innerHTML = swamp.strings.source_link;
